@@ -1,0 +1,189 @@
+
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Informe Entropía</title>
+<style>
+body { font-family: Arial; margin:0; background:#f6f7fb; }
+.wrap { max-width:1000px; margin:auto; padding:20px; }
+
+.section {
+  background:white; margin-top:15px; padding:12px;
+  border-radius:8px;
+}
+
+h1 { margin-bottom:5px; }
+
+img { max-width:100%; }
+
+table { width:100%; border-collapse:collapse; }
+th, td { border:1px solid #ccc; padding:6px; }
+th { background:#eee; }
+</style>
+</head>
+
+<body>
+<div class='wrap'>
+<h1>Práctica 0 - Entropía</h1>
+<p><b>Fecha:</b> 2026-04-23 23:23</p>
+
+<div class='section'>
+<b>Total imágenes:</b> 200 |
+<b>Clases:</b> 10 |
+<b>Mayor entropía:</b> peolpe_and_villages_in_Africa |
+<b>Promedio RGB:</b> 7.050
+</div>
+
+
+<div class='section'>
+<h2>1. Introducción</h2>
+<p>En esta práctica se analiza la entropía de un conjunto de imágenes con el objetivo de medir su nivel de información y complejidad. 
+Se comparan diferentes clases para observar cómo varía este valor.</p>
+</div>
+
+
+<div class='section'>
+<h2>2. Entropía en imágenes</h2>
+<p>La entropía es una medida que indica la cantidad de información o desorden en una imagen.</p>
+<ul>
+<li><b>Escala de grises:</b> se calcula a partir de la distribución de intensidades de los píxeles.</li>
+<li><b>Color:</b> se calcula en los canales RGB y luego se obtiene un promedio.</li>
+</ul>
+</div>
+
+
+<div class='section'>
+<h2>3. Diagramas de cajas</h2>
+<p>Los diagramas muestran la distribución de la entropía por clase.</p>
+<p><b>Eje X:</b> clases | <b>Eje Y:</b> entropía</p>
+
+<img src='graficos/boxplot_entropia_gris.png'>
+<img src='graficos/boxplot_entropia_color.png'>
+
+<p><b>Clase con mayor entropía:</b> peolpe_and_villages_in_Africa</p>
+</div>
+
+
+<div class='section'>
+<h2>4. Análisis</h2>
+<p>Las clases con mayor entropía presentan mayor variación de colores, texturas y objetos, 
+lo que incrementa la cantidad de información. Las clases con menor entropía tienden a ser más uniformes.</p>
+</div>
+
+
+<div class='section'>
+<h2>5. Modificaciones</h2>
+<p>Se aplicaron modificaciones pequeñas, medianas y grandes para analizar cómo cambia la entropía.</p>
+
+<img src='graficos/barras_cambio_entropia_modificaciones.png'>
+<img src='graficos/comparacion_modificaciones.png'>
+
+<p>Se observa que al modificar la imagen, la entropía cambia debido a la alteración de la información visual.</p>
+</div>
+
+
+<div class='section'>
+<h2>6. Resultados</h2>
+<p>Se muestra una imagen representativa por cada clase junto con su histograma y valores de entropía.</p>
+<table>
+<tr><th>Clase</th><th>Ruta</th><th>Entropía gris</th><th>Entropía color</th><th>Histograma</th></tr>
+
+
+    <tr>
+    <td>beaches</td>
+    <td><small>images_extracted/training_set/beaches/115.jpg</small></td>
+    <td>7.6637</td>
+    <td>7.6325</td>
+    <td><img src='histogramas/beaches_06_115.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>bus</td>
+    <td><small>images_extracted/training_set/bus/325.jpg</small></td>
+    <td>7.6357</td>
+    <td>7.6662</td>
+    <td><img src='histogramas/bus_16_325.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>dinosaurs</td>
+    <td><small>images_extracted/training_set/dinosaurs/422.jpg</small></td>
+    <td>5.8416</td>
+    <td>6.0242</td>
+    <td><img src='histogramas/dinosaurs_13_422.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>elephants</td>
+    <td><small>images_extracted/training_set/elephants/528.jpg</small></td>
+    <td>7.7478</td>
+    <td>7.7525</td>
+    <td><img src='histogramas/elephants_19_528.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>flowers</td>
+    <td><small>images_extracted/training_set/flowers/624.jpg</small></td>
+    <td>6.7524</td>
+    <td>6.9374</td>
+    <td><img src='histogramas/flowers_15_624.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>foods</td>
+    <td><small>images_extracted/training_set/foods/919.jpg</small></td>
+    <td>7.7884</td>
+    <td>7.7714</td>
+    <td><img src='histogramas/foods_10_919.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>horses</td>
+    <td><small>images_extracted/training_set/horses/712.jpg</small></td>
+    <td>7.4735</td>
+    <td>7.4661</td>
+    <td><img src='histogramas/horses_03_712.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>monuments</td>
+    <td><small>images_extracted/training_set/monuments/221.jpg</small></td>
+    <td>7.7633</td>
+    <td>7.7474</td>
+    <td><img src='histogramas/monuments_12_221.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>mountains_and_snow</td>
+    <td><small>images_extracted/training_set/mountains_and_snow/824.jpg</small></td>
+    <td>7.7570</td>
+    <td>7.6860</td>
+    <td><img src='histogramas/mountains_and_snow_15_824.png'></td>
+    </tr>
+    
+
+    <tr>
+    <td>peolpe_and_villages_in_Africa</td>
+    <td><small>images_extracted/training_set/peolpe_and_villages_in_Africa/22.jpg</small></td>
+    <td>7.7471</td>
+    <td>7.7588</td>
+    <td><img src='histogramas/peolpe_and_villages_in_Africa_13_22.png'></td>
+    </tr>
+    
+</table></div>
+
+<div class='section'>
+<h2>7. Conclusión</h2>
+<p>La entropía es una herramienta útil para medir la complejidad de una imagen. 
+Permite diferenciar entre imágenes simples y complejas, así como analizar el efecto de modificaciones sobre la información visual.</p>
+</div>
+
+</div></body></html>
