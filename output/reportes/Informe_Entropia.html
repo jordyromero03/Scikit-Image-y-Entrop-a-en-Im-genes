@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe: Análisis de Entropía en Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 15px;
+        }
+        h1 {
+            color: #000;
+            margin: 0;
+        }
+        .institution {
+            color: #666;
+            font-size: 0.95em;
+            margin: 5px 0;
+        }
+        section {
+            margin: 30px 0;
+            padding: 15px;
+            border-left: 3px solid #666;
+        }
+        h2 {
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        th {
+            background-color: #ddd;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #999;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #999;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .image-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        .image-caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        p {
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #999;
+            padding-top: 15px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Análisis de Entropía en Imágenes</h1>
+            <p class="institution">GIATA - Grupo de Investigación en Análisis de Información y Tratamiento Automático</p>
+            <p class="institution">Universidad Politécnica Salesiana - Ecuador</p>
+            <p class="institution">Generado: 23/04/2026 20:40:54</p>
+        </header>
+
+        <section>
+            <h2>Introducción</h2>
+            <p>Este informe presenta los resultados del análisis de entropía realizado sobre 900 imágenes organizadas en 10 categorías. Se calculó la entropía en escala de grises y en color (RGB), se realizaron modificaciones en tres niveles y se generaron visualizaciones para el análisis comparativo.</p>
+        </section>
+
+        <section>
+            <h2>Marco Teórico</h2>
+            <h3>¿Qué es la Entropía?</h3>
+            <p>La entropía es una medida de la incertidumbre o desorden en los datos. En el contexto de imágenes, cuantifica la variabilidad de los valores de píxeles. Se calcula usando la fórmula de Shannon: H = -Σ(p·log₂(p)), donde p es la probabilidad de cada valor de píxel.</p>
+            <h3>Entropía en Escala de Grises</h3>
+            <p>Considera un único canal de intensidad (0-255). Valores altos indican mayor variabilidad de luminosidad.</p>
+            <h3>Entropía en Color (RGB)</h3>
+            <p>Se calcula la entropía de cada canal (Rojo, Verde, Azul) independientemente y se promedian. Generalmente es mayor que en escala de grises debido a la información adicional de color.</p>
+        </section>
+
+        <section>
+            <h2>Datos y Estadísticas</h2>
+            <p><strong>Total de imágenes procesadas:</strong> 900</p>
+            <p><strong>Categorías analizadas:</strong> 10</p>
+
+            <h3>Tabla de Estadísticas por Categoría</h3>
+            <table class="stats-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Categoría</th>
+      <th>Entropía Gray (Media)</th>
+      <th>Entropía Gray (Std)</th>
+      <th>Entropía RGB (Media)</th>
+      <th>Entropía RGB (Std)</th>
+      <th>Imágenes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>beaches</td>
+      <td>7.214833</td>
+      <td>0.304457</td>
+      <td>7.238489</td>
+      <td>0.270655</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>bus</td>
+      <td>7.469812</td>
+      <td>0.157100</td>
+      <td>7.482515</td>
+      <td>0.150347</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>dinosaurs</td>
+      <td>4.705511</td>
+      <td>0.500830</td>
+      <td>4.792988</td>
+      <td>0.487948</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>elephants</td>
+      <td>7.437686</td>
+      <td>0.255177</td>
+      <td>7.452161</td>
+      <td>0.232302</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>flowers</td>
+      <td>6.489819</td>
+      <td>0.540525</td>
+      <td>6.483843</td>
+      <td>0.530310</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>foods</td>
+      <td>7.349673</td>
+      <td>0.447191</td>
+      <td>7.314419</td>
+      <td>0.421755</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>horses</td>
+      <td>7.204612</td>
+      <td>0.193058</td>
+      <td>7.079788</td>
+      <td>0.213947</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>monuments</td>
+      <td>7.379053</td>
+      <td>0.402095</td>
+      <td>7.391135</td>
+      <td>0.413064</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>mountains_and_snow</td>
+      <td>7.351393</td>
+      <td>0.393941</td>
+      <td>7.370899</td>
+      <td>0.371156</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>peolpe_and_villages_in_Africa</td>
+      <td>7.516002</td>
+      <td>0.243557</td>
+      <td>7.518209</td>
+      <td>0.226965</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+
+            <h3>Análisis de Categorías</h3>
+            <p><strong>Categoría con Mayor Entropía:</strong> peolpe_and_villages_in_Africa (7.5182 bits)</p>
+            <p>Las imágenes de esta categoría presentan mayor complejidad visual y variabilidad de colores.</p>
+
+            <p><strong>Categoría con Menor Entropía:</strong> dinosaurs (4.7930 bits)</p>
+            <p>Las imágenes de esta categoría son más uniformes y tienen menor variabilidad cromática.</p>
+        </section>
+
+        <section>
+            <h2>Visualizaciones de Ejemplos</h2>
+            <div class="image-section">
+                <img src="../images_originales/ejemplos_por_categoria.png" alt="Ejemplos de imágenes por categoría" style="max-width: 90%;">
+                <p class="image-caption">Ejemplos representativos de cada categoría</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Histogramas de Ejemplo</h2>
+            <div class="image-section">
+                <img src="../histogramas/03_dinosaurs_histogramas.png" alt="Histogramas de ejemplo" style="max-width: 90%;">
+                <p class="image-caption">Histogramas en escala de grises y canales RGB de ejemplo</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Distribución de Entropía por Categoría</h2>
+            <div class="image-section">
+                <img src="../graficos/boxplots_por_categoria.png" alt="Boxplots de entropía" style="max-width: 100%;">
+                <p class="image-caption">Diagramas de cajas y bigotes para escala de grises y RGB</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Modificación de Imágenes</h2>
+            <p>Se aplicaron tres niveles de modificación a 10 imágenes:</p>
+            <ul>
+                <li><strong>Pequeña (~1%):</strong> Se agregó un pequeño círculo rojo. Cambio promedio: +0.0012 bits</li>
+                <li><strong>Mediana (~10%):</strong> Se aplicó un filtro de desenfoque y se agregó un rectángulo verde. Cambio promedio: -0.0972 bits</li>
+                <li><strong>Grande (~20%):</strong> Se aplicó un filtro de detección de bordes y se agregó un rectángulo azul. Cambio promedio: -0.1651 bits</li>
+            </ul>
+
+            <div class="image-section">
+                <img src="../graficos/ejemplos_modificaciones.png" alt="Ejemplos de modificaciones" style="max-width: 100%;">
+                <p class="image-caption">Ejemplo de una imagen original y sus tres versiones modificadas</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Análisis Comparativo de Modificaciones</h2>
+            <div class="image-section">
+                <img src="../graficos/comparacion_modificaciones.png" alt="Comparación de modificaciones" style="max-width: 100%;">
+                <p class="image-caption">Gráficos comparativos mostrando el impacto de las modificaciones en entropía</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusiones</h2>
+            <ul>
+                <li>La entropía en color (RGB) es consistentemente mayor que en escala de grises.</li>
+                <li>Existen diferencias significativas en entropía entre las diferentes categorías de imágenes.</li>
+                <li>Las modificaciones pequeñas producen cambios mínimos en entropía, mientras que las grandes generan cambios más pronunciados.</li>
+                <li>La relación entre cambio visual y cambio de entropía varía según el tipo de modificación aplicada.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Informe generado automáticamente</p>
+            <p>Universidad Politécnica Salesiana - Ecuador</p>
+        </footer>
+    </div>
+</body>
+</html>
